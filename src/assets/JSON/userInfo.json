@@ -1,0 +1,78 @@
+{
+    "firstName": "Mohamed Walid",
+    "lastName": "Mzoughi",
+    "usageName": "Walid",
+    "brands": [
+        {
+          "id" : 1,
+          "src": "assets/img/techs/angular.png",
+          "alt": "Angular",
+          "title": "Angular"
+        },
+        {
+          "id" : 2,
+          "src": "assets/img/techs/nodejs.png",
+          "alt": "NodeJS",
+          "title": "NodeJS"
+        },
+        {
+          "id" : 3,
+          "src": "assets/img/techs/docker.png",
+          "alt": "docker",
+          "title": "docker"
+        },
+        {
+          "id" : 4,
+          "src": "assets/img/techs/html.png",
+          "alt": "html",
+          "title": "html"
+        },
+        {
+          "id" : 5,
+          "src": "assets/img/techs/js.png",
+          "alt": "js",
+          "title": "js"
+        },
+        {
+          "id" : 6,
+          "src": "assets/img/techs/github.png",
+          "alt": "github",
+          "title": "github"
+        },
+        {
+          "id" : 7,
+          "src": "assets/img/techs/mysql.png",
+          "alt": "mysql",
+          "title": "mysql"
+        },
+        {
+          "id" : 8,
+          "src": "assets/img/techs/mongodb.png",
+          "alt": "mongodb",
+          "title": "mongodb"
+        }
+    ],
+    "experiences": [
+        {
+            "title": "Développeur Full-Stack",
+            "company": "Ville de Montréal",
+            "duration": "Mai 2024 - Août 2024",
+            "type": "Full time",
+            "description": "En tant que développeur full-stack, j'ai contribué à la modélisation et à l'implémentation de l'interface graphique, à la création et à l'utilisation des services REST, à l'écriture de tests unitaires, à la gestion de la base de données MongoDB, et à la modification de l'environnement de développement avec Docker, pour une application utilisée par les ressources humaines."
+        },
+        {
+            "title": "Développeur Full-Stack",
+            "company": "Ville de Montréal",
+            "duration": "Mai 2023 - Août 2023",
+            "type": "Full time",
+            "description": "En tant que développeur full-stack, j'ai participé à la conception et à la modélisation du logiciel, ainsi qu'à la modélisation de l'interface graphique. J'ai également créé et utilisé des services API pour assurer une communication efficace entre les différentes parties de l'application."
+        }
+    ],
+    "links": {
+        "github": "https://github.com/medWal9",
+        "linkedin": "https://www.linkedin.com/in/mohamed-walid-mzoughi-574624325/"
+        
+    },
+    "projects": []
+    
+}
