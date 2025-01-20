@@ -18,6 +18,7 @@ import { ScrollSpyModule } from 'ng-spy';
 import { BrandsComponent } from './main/brands/brands.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserInfoService } from './user-info.service';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { UserInfoService } from './user-info.service';
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     RouterModule,
     BrowserAnimationsModule,
     CarouselModule,
