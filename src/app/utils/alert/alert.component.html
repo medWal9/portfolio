@@ -1,0 +1,10 @@
+<div *ngIf="isSubmitted">
+    <div *ngIf="isSuccess" class="alert alert-success" role="alert">
+        <i class="fa-solid fa-circle-check"></i>
+        <span> Votre message a été envoyé avec succès !</span>
+    </div>
+    <div *ngIf="isError" class="alert alert-danger" role="alert">
+      <i class="fa-solid fa-exclamation-circle"></i> 
+      <span> Une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer plus tard.</span>
+    </div>
+</div>

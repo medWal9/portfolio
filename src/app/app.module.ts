@@ -19,6 +19,7 @@ import { BrandsComponent } from './main/brands/brands.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserInfoService } from './user-info.service';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AlertComponent } from './utils/alert/alert.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     WorkComponent,
     TestimonialsComponent,
     ContactComponent,
-    BrandsComponent
+    BrandsComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,
