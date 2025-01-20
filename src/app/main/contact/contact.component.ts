@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {UserInfoService } from '../../user-info.service'
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-import { Subject } from 'rxjs';
+
 
 
 @Component({
@@ -31,7 +31,7 @@ export class ContactComponent {
 
   onSubmit() {
     if (this.contactForm.valid) {
-      this.http.post('https://formspree.io/f/123', this.contactForm.value).subscribe(
+      this.http.post(this.userInfo.formServiceLink, this.contactForm.value).subscribe(
         response => {
           this.isSubmitted = true;
           this.isSuccess = true;
@@ -45,5 +45,12 @@ export class ContactComponent {
         }
       );
     }
+    this.resetStates()
+  }
+
+  resetStates() {
+    this.isSubmitted = false;
+    this.isSuccess = false;
+    this.isError = false;
   }
 }

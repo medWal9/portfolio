@@ -1,3 +1,10 @@
 .small-text {
     font-size: 18px;
 }
+
+.disabled-btn {
+    background-color: #ccc; /* Couleur de fond pour le bouton désactivé */
+    cursor: not-allowed; /* Changer le curseur pour indiquer que le bouton est désactivé */
+    pointer-events: none; /* Désactiver les événements de clic */
+    opacity: 0.6; /* Rendre le bouton légèrement transparent */
+}
