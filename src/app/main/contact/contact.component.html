@@ -49,22 +49,17 @@
             </div>
             <div class="col-lg-4 pe-md-5">
                 <div class="contact-banner d-none d-lg-block">
-                    <img src="assets/img/contact-us.png" title="" alt="">
+                    <img src="assets/img/mwdev.png" title="" alt="">
                 </div>
                 <div class="contact-info">
                     <div class="contact-info-in">
                         <label>Envoyez un e-mail</label>
-                        <a href="mailto:sample@domain.com">mzoughiwalid@gmail.com</a>
-                    </div>
-                    <div class="contact-info-in">
-                        <label>write an e-mail</label>
-                        <a href="tel:+15145145114">+1(514)514-5114</a>
+                        <a href="mailto:{{userInfo.email}}"><p class="small-text">{{userInfo.email}}</p></a>
                     </div>
                 </div>
                 <div class="social-icon">
-                    <a class="facebook" href="javascript:"><i class="fab fa-facebook-f"></i></a>
-                    <a class="dribbble" href="javascript:"><i class="fab fa-dribbble"></i></a>
-                    <a class="linkedin" href="javascript:"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="github" href="{{userInfo.links.github}}" target="_blank"><i class="fab fa-github"></i></a>
+                    <a class="linkedin m-0" href="{{userInfo.links.linkedin}}" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
         </div>
