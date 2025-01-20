@@ -14,7 +14,6 @@ export class HomeComponent implements OnInit{
       const typed = new Typed('.typed-element', typeoptions);
       this.userInfoService.getUserInfo().subscribe((userInfo) => {
         this.userInfo = userInfo;
-        console.log(this.userInfo.links.github);
       });
   }
 }
