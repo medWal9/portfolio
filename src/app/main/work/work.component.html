@@ -9,56 +9,20 @@
     </div>
     <div class="lightbox-gallery">
     <owl-carousel-o [options]="customOptions">
-        <ng-template carouselSlide>
+        <ng-template carouselSlide *ngFor="let project of userProjects; let i=index">
             <div class="project-box">
                 <div class="project-media">
-                    <img src="assets/img/popup-project-4.jpg" title="" alt="">
-                    <a class="gallery-link" href="assets/img/popup-project-4.jpg" data-title="Caption for image 4" data-lightbox="services"><i class="bi-plus"></i></a>
+                    <img src="{{project.image}}" title="" alt="">
+                    <a class="gallery-link" href="{{project.image}}" data-title="Caption for image 4" data-lightbox="services"><i class="bi-plus"></i></a>
                 </div>
                 <div class="project-body">
                     <div class="text">
-                        <h5>Backend</h5>
-                        <span>Warehousez</span>
+                        <h5>{{project.name}}</h5>
+                        <span>{{project.work}}</span>
                     </div>
                     <div class="link">
                         <a class="p-link px_modal"  data-bs-toggle="modal" 
-                        data-bs-target="#project_4"><i class="bi-arrow-right"></i> </a>
-                    </div>
-                </div>
-            </div>
-        </ng-template>
-        <ng-template carouselSlide>
-            <div class="project-box">
-                <div class="project-media">
-                    <img src="assets/img/popup-project-5.jpg" title="" alt="">
-                    <a class="gallery-link" href="assets/img/popup-project-5.jpg" data-title="Caption for image 5" data-lightbox="services"><i class="bi-plus"></i></a>
-                </div>
-                <div class="project-body">
-                    <div class="text">
-                        <h5>Backend</h5>
-                        <span>Warehousez</span>
-                    </div>
-                    <div class="link">
-                        <a class="p-link px_modal"  data-bs-toggle="modal" 
-                        data-bs-target="#project_5"><i class="bi-arrow-right"></i> </a>
-                    </div>
-                </div>
-            </div>
-        </ng-template>
-        <ng-template carouselSlide>
-            <div class="project-box">
-                <div class="project-media">
-                    <img src="assets/img/popup-project-6.jpg" title="" alt="">
-                    <a class="gallery-link" href="assets/img/popup-project-6.jpg" data-title="Caption for image 6" data-lightbox="services"><i class="bi-plus"></i></a>
-                </div>
-                <div class="project-body">
-                    <div class="text">
-                        <h5>Backend</h5>
-                        <span>Warehousez</span>
-                    </div>
-                    <div class="link">
-                        <a class="p-link px_modal"  data-bs-toggle="modal" 
-                        data-bs-target="#project_6"><i class="bi-arrow-right"></i> </a>
+                        attr.data-bs-target="#{{project.modalId}}"><i class="bi-arrow-right"></i> </a>
                     </div>
                 </div>
             </div>
@@ -66,3 +30,49 @@
     </owl-carousel-o>
 </div>
 </div>
+
+<div *ngFor="let project of userProjects">
+    <!-- Snigle 1 -->
+<div class="modal fade" id="{{project.modalId}}" tabindex="-1" aria-labelledby="project_1" aria-hidden="true">
+    <div class="modal-dialog px-modal">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <div class="single-project-box">
+            <div class="row align-items-start">
+                <div class="col-lg-7">
+                    <img class="border" src="{{project.image}}" title="" alt="">
+                </div>
+                <div class="col-lg-5 pt-4 pt-lg-0">
+                    <h4>{{project.name}}</h4>
+                    <p class="mb-3">{{project.description}}</p>
+                    <div class="about-content">
+                        <ul>
+                            <li class="d-flex">
+                                <span class="col-4 col-lg-3">Type:</span>
+                                <span>{{project.type}}</span>
+                            </li>
+                            <li class="d-flex">
+                                <span class="col-4 col-lg-3">Langages:</span>
+                                <span>{{getProjectTech(project.technologies)}}</span>
+                            </li>
+                            <li class="d-flex" *ngIf="project.gitLink">
+                                <span class="col-4 col-lg-3">Github:</span>
+                                <span>{{project.gitLink}}</span>
+                            </li>
+                            <li class="d-flex" *ngIf="project.link">
+                                <span class="col-4 col-lg-3">Live URL:</span>
+                                <span>{{project.link}}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- End Snigle 1 -->
+</div>
+    
